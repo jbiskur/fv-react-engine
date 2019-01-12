@@ -1,18 +1,18 @@
-const path = require('path');
+const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.join(__dirname,'src','index.js'),
+  entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.join(__dirname,'build'),
-    filename: 'index.bundle.js'
+    path: path.join(__dirname, "build"),
+    filename: "index.bundle.js"
   },
-  mode: process.env.NODE_ENV || 'development',
+  mode: process.env.NODE_ENV || "development",
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
   devServer: {
-    contentBase: path.join(__dirname,'src')
+    contentBase: path.join(__dirname, "src")
   },
   module: {
     rules: [
@@ -24,6 +24,11 @@ module.exports = {
         }
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader", "eslint-loader"]
+      },
+      {
         test: /\.(css|scss)$/,
         use: [
           "style-loader", // creates style nodes from JS strings
@@ -33,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        loaders: ['file-loader']
+        loaders: ["file-loader"]
       },
       {
         test: /\.html$/,
@@ -50,5 +55,9 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]
+  ],
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  }
 };

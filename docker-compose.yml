@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  fv-react-engine:
+    container_name: fv-react-engine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
