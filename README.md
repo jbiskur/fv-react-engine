@@ -1,2 +1,2 @@
 # fv-react-engine
-Software Engineering Degree React Game Engine Boilerplate
+React boilerplate that is used with the Software Engineering Course at the Faroe Islands University, a React Game Engine Boilerplate.

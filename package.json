@@ -1,0 +1,47 @@
+{
+  "name": "fv-react-engine",
+  "version": "0.1.0",
+  "description": "React boilerplate that is used with the Software Engineering Course at the Faroe Islands University, a React Game Engine Boilerplate.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbiskur/fv-react-engine.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "boilerplate"
+  ],
+  "author": "Julius Biskopstø <jbiskur@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbiskur/fv-react-engine/issues"
+  },
+  "homepage": "https://github.com/jbiskur/fv-react-engine#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {}
+}
