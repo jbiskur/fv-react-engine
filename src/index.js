@@ -2,11 +2,8 @@ import "style/index.scss";
 
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
-let HelloWorld = () => {
-  console.log("HELLO");
-  return <h1>Hello there World!</h1>;
-};
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
-HelloWorld.propTypes = {};
+App.propTypes = {};
